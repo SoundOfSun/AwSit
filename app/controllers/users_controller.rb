@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.all
+    @users = policy_scope(User).all
   end
 
   def show
@@ -21,6 +21,8 @@ class UsersController < ApplicationController
   def dashboard
     @user = current_user
     @bookings = @user.bookings
+    authorize @user
+    # means we need to create a related Pundit policy
   end
 
   private
@@ -30,3 +32,6 @@ class UsersController < ApplicationController
   end
 
 end
+
+
+
