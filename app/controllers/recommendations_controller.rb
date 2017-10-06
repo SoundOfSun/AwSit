@@ -19,6 +19,7 @@ class RecommendationsController < ApplicationController
     else
       render 'users/dashboard'
     end
+    authorize @recommendation
   end
 
    def edit
