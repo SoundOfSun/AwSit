@@ -21,6 +21,8 @@ class UsersController < ApplicationController
   def dashboard
     @user = current_user
     @bookings = @user.bookings
+    authorize @user
+    # means we need to create a related Pundit policy
   end
 
   private
