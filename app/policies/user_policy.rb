@@ -1,9 +1,12 @@
 class UserPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
-      scope
+      scope.all
+      # For a multi-tenant SaaS app, you may want to use:
+      # scope.where(user: user)
     end
   end
+
   def dashboard?
     user == @user
   end
