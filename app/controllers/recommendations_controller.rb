@@ -22,7 +22,7 @@ class RecommendationsController < ApplicationController
     authorize @recommendation
   end
 
-   def edit
+  def edit
     @recommendation = Recommendation.find(params[:id])
   end
 
@@ -30,6 +30,7 @@ class RecommendationsController < ApplicationController
     recommendation_to_update = Recommendation.find(params[:id])
     recommendation_to_update.update(recommendation_params)
     redirect_to recommendation_path(recommendation_to_update)
+    authorize @restaurant
   end
 
 end
