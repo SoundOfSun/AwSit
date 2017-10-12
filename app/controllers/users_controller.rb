@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+  skip_after_action :verify_policy_scoped, only: :edit
 
   def index
     @users = policy_scope(User).all
@@ -6,10 +8,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    authorize @user
   end
 
   def edit
     @user = current_user
+    authorize @user
   end
 
   def update
