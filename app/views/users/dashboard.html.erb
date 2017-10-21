@@ -1,29 +1,35 @@
 <div class="dashboard-layout">
+  <!-- USER BOX START -->
   <div class="user">
+    <% if current_user.babysitter %>
     <div class="user-infos">
-      <div class="avatar">
-        <img src="http://via.placeholder.com/80x80" alt="Avatar">
-        <div class="switch">
-          <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
-          <label for="cmn-toggle-1"></label>
+        <div class="avatar">
+          <img src="http://via.placeholder.com/80x80" alt="Avatar">
+          <div class="switch">
+            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+            <label for="cmn-toggle-1"></label>
+          </div>
+        </div>
+        <div class="user-infos-right">
+          <div class="user-name">
+            <h2><%= current_user.name %></h2>
+          </div>
+          <div class="address">
+            <p><%= current_user.address %></p>
+          </div>
         </div>
       </div>
-      <div class="user-infos-right">
-        <div class="user-name">
-          <h2>Beth Sanchez</h2>
-        </div>
-        <div class="address">
-          <p>55 usher road, London E3 2HA</p>
-        </div>
+      <div class="user-description">
+        <p>"This is a description"</p>
       </div>
-    </div>
-    <div class="user-description">
-      <p>"This is a description"</p>
-    </div>
-    <div align="right">
-      <a href="#" class="btn btn-primary">EDIT</a>
-    </div>
+      <div align="right">
+        <a href="#" class="btn btn-primary">EDIT</a>
+      </div>
+    <% end %>
   </div>
+  <!-- USER BOX FINISH -->
+
+  <!-- SKILLS BOX START: Babysitter ONLY -->
   <div class="skills">
     <div class="skills-grid">
       <div class="skill">
@@ -49,6 +55,9 @@
       <a href="#" class="btn btn-primary">EDIT</a>
     </div>
   </div>
+  <!-- SKILLS BOX FINISH -->
+
+  <!-- BOOKINGS BOX START -->
   <div class="bookings">
     <h1>Manage Bookings</h1>
     <div class="booking-cards">
@@ -67,4 +76,5 @@
       </div>
     </div>
   </div>
+  <!-- BOOKINGS BOX FINISH -->
 </div>
