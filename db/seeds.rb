@@ -1,5 +1,8 @@
-User.destroy_all
+# Pay attention to the order !
+# User is last - see dependent destroy
+Booking.destroy_all
 Skill.destroy_all
+User.destroy_all
 
 p "Seeding Users..."
 
@@ -18,3 +21,18 @@ skill5 = Skill.create!(babysitter: babysitter1, content: 'Making ennemies')
 skill6 = Skill.create!(babysitter: babysitter1, content: 'Being awesome')
 
 p "Skills have successfully been created !"
+
+p "Seeding Bookings..."
+
+User.where(babysitter: false).each do |user|
+  2.times do
+    b = Booking.new
+    msg_content = ["I have two kids and I need a babysitter for this weekend !", "Need a babysitter who can drive 3 times a week asap.", "Hello, my name is Beth and I have two teenagers. I would need someone to take care of them when I have night shifts at the clinic."]
+    b.user = user
+    b.status = 'pending'
+    b.message = msg_content.sample
+    b.save
+  end
+end
+
+p "Bookings have successfully been created !"
