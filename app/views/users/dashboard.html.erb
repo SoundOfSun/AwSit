@@ -2,7 +2,7 @@
   <!-- USER BOX START -->
   <div class="user">
     <% if current_user.babysitter %>
-    <div class="user-infos">
+      <div class="user-infos">
         <div class="avatar">
           <img src="http://via.placeholder.com/80x80" alt="Avatar">
           <div class="switch">
@@ -20,7 +20,24 @@
         </div>
       </div>
       <div class="user-description">
-        <p>"This is a description"</p>
+        <p>"<%= current_user.profile_description %>"</p>
+      </div>
+      <div align="right">
+        <a href="#" class="btn btn-primary">EDIT</a>
+      </div>
+    <% else %>
+      <div class="user-infos">
+        <div class="avatar">
+          <img src="http://via.placeholder.com/80x80" alt="Avatar">
+        </div>
+        <div class="user-infos-right">
+          <div class="user-name">
+            <h2><%= current_user.name %></h2>
+          </div>
+          <div class="address">
+            <p><%= current_user.address %></p>
+          </div>
+        </div>
       </div>
       <div align="right">
         <a href="#" class="btn btn-primary">EDIT</a>
