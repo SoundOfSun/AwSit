@@ -63,9 +63,18 @@
   border-radius: 3px;
 }
 // MANAGE BOOKINGS
+.bookings h1 {
+  text-align: center;
+}
+.card {
+  margin-bottom: 10px;
+}
 .card-left, .card-right {
   text-align: center;
 }
 .card-left, .card-middle {
   margin-bottom: 10px;
+}
+.card-left h2 {
+  margin-top: 5px;
 }
