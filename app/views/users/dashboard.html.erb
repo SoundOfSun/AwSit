@@ -47,31 +47,20 @@
   <!-- USER BOX FINISH -->
 
   <!-- SKILLS BOX START: Babysitter ONLY -->
-  <div class="skills">
-    <div class="skills-grid">
-      <div class="skill">
-        <p>Skill 1</p>
+  <% if current_user.babysitter %>
+    <div class="skills">
+      <div class="skills-grid">
+        <% current_user.skills.each do |skill| %>
+        <div class="skill">
+          <p><%= skill.content %></p>
+        </div>
+        <% end %>
       </div>
-      <div class="skill">
-        <p>Skill 2</p>
-      </div>
-      <div class="skill">
-        <p>Skill 3</p>
-      </div>
-      <div class="skill">
-        <p>Skill 4</p>
-      </div>
-      <div class="skill">
-        <p>Skill 5</p>
-      </div>
-      <div class="skill">
-        <p>Skill 6</p>
+      <div align="right">
+        <%= link_to "EDIT", new_skill_path(current_user), class: 'btn btn-primary' %>
       </div>
     </div>
-    <div align="right">
-      <a href="#" class="btn btn-primary">EDIT</a>
-    </div>
-  </div>
+  <% end %>
   <!-- SKILLS BOX FINISH -->
 
   <!-- BOOKINGS BOX START -->
