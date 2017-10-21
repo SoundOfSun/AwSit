@@ -37,11 +37,9 @@
 .home-info {
   color: white;
   text-align: center;
-  height: 50vh;
+  height: auto;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
-  display: flex;
-  justify-content: center;
 }
 
 .home-info h3 {
@@ -49,3 +47,55 @@
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
 }
 
+//info home cards
+
+.info-card {
+  height: 200px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin: 10px;
+}
+
+.card-category {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card-description p {
+  font-size: 14px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+
+.home-info-row {
+  margin-bottom: 15px;
+}
+
+// third banner
+
+.home-testimonies {
+  color: white;
+  text-align: center;
+  height: 70vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+}
+
+.home-testimonies h3 {
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
