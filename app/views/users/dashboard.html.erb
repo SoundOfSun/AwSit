@@ -1,0 +1,86 @@
+<div class="dashboard-layout">
+  <!-- USER BOX START -->
+  <div class="user">
+    <% if current_user.babysitter %>
+      <div class="user-infos">
+        <div class="avatar">
+          <img src="http://via.placeholder.com/80x80" alt="Avatar">
+          <div class="switch">
+            <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox">
+            <label for="cmn-toggle-1"></label>
+          </div>
+        </div>
+        <div class="user-infos-right">
+          <div class="user-name">
+            <h2><%= current_user.name %></h2>
+          </div>
+          <div class="address">
+            <p><%= current_user.address %></p>
+          </div>
+        </div>
+      </div>
+      <div class="user-description">
+        <p>"<%= current_user.profile_description %>"</p>
+      </div>
+      <div align="right">
+        <a href="#" class="btn btn-primary">EDIT</a>
+      </div>
+    <% else %>
+      <div class="user-infos">
+        <div class="avatar">
+          <img src="http://via.placeholder.com/80x80" alt="Avatar">
+        </div>
+        <div class="user-infos-right">
+          <div class="user-name">
+            <h2><%= current_user.name %></h2>
+          </div>
+          <div class="address">
+            <p><%= current_user.address %></p>
+          </div>
+        </div>
+      </div>
+      <div align="right">
+        <a href="#" class="btn btn-primary">EDIT</a>
+      </div>
+    <% end %>
+  </div>
+  <!-- USER BOX FINISH -->
+
+  <!-- SKILLS BOX START: Babysitter ONLY -->
+  <% if current_user.babysitter %>
+    <div class="skills">
+      <div class="skills-grid">
+        <% current_user.skills.each do |skill| %>
+        <div class="skill">
+          <p><%= skill.content %></p>
+        </div>
+        <% end %>
+      </div>
+      <div align="right">
+        <%= link_to "EDIT", new_skill_path(current_user), class: 'btn btn-primary' %>
+      </div>
+    </div>
+  <% end %>
+  <!-- SKILLS BOX FINISH -->
+
+  <!-- BOOKINGS BOX START -->
+  <div class="bookings">
+    <h1>Manage Bookings</h1>
+    <div class="booking-cards">
+      <div class="card">
+        <div class="card-left avatar">
+          <img src="http://via.placeholder.com/50x50" alt="Avatar">
+          <h2>Parent Name</h2>
+        </div>
+        <div class="card-middle">
+          <p class="message">"Hello, my name is Jane Doe and I have two children, age five and three. My son Will is lactose intolerent so I would benefit from your cooking. I need someone for the next couple of weeks, Saturday and Sunday."</p>
+        </div>
+        <div class="card-right">
+          <a href="#" class="btn btn-primary">Yes</a>
+          <a href="#" class="btn btn-primary">No</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- BOOKINGS BOX FINISH -->
+</div>
