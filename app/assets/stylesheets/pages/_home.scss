@@ -27,6 +27,29 @@
   justify-content: space-between;
 }
 
+.home-buttons button {
+  color: white !important;
+  background-color: #6FD08C;
+  opacity: 0.9;
+  border-radius: 10px;
+  border-style: none;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0;
+  &:hover {
+    color: #6FD08C;
+    opacity: 1;
+  }
+}
+
+.home-buttons button a {
+  color: white;
+}
+
+.home-buttons button a:hover {
+  text-decoration: none;
+}
+
 .btn-primary {
   border-radius: 10px;
   text-align: center;
