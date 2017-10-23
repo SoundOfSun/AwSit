@@ -111,13 +111,13 @@
   text-transform: uppercase;
 }
 
-.card-description {
+.info-card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
 
-.card-description p {
+.info-card-description p {
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
@@ -132,14 +132,59 @@
 .home-testimonies {
   color: white;
   text-align: center;
-  height: 70vh;
+  height: auto;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
-  display: flex;
-  justify-content: center;
 }
 
 .home-testimonies h3 {
   font-weight: bold;
   text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.testimonies-card {
+  height: 120px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  color: white;
+  position: relative;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.test-card-1, .test-card-3 {
+  margin-right: 60px;
+}
+
+.test-card-2,{
+  margin-left: 60px;
+}
+
+.testimonies-card-description {
+  max-width: 60%;
+  padding: 20px;
+}
+
+.testimonies-card-description p {
+  font-size: 11px;
+  opacity: 0.7;
+  font-weight: lighter;
+}
+
+.user-avatar-container {
+  padding: 30px;
+}
+
+.card-user {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+}
+
+.test-user-name p {
+  font-size: 14px;
+  font-weight: bold;
 }
