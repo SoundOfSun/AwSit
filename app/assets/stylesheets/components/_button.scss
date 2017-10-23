@@ -1,0 +1,69 @@
+// MAIN BTNS
+// Simple Button
+.btn-awsit {
+  font-family: "Raleway", "Helvetica", "sans-serif";;
+  font-size: 16px;
+  color: $white;
+  background: $lavender;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px 15px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  text-shadow: 1px 0px 3px rgba(0,0,0,0.3);
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:link, &:hover, &:visited, &:active, &:focus {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+// Medium-style Button
+.btn-awsit-rnd {
+  color: $lavender;
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid $lavender;
+  border-radius: 50px;
+  padding: 10px 15px;
+  opacity: 0.8;
+
+  &:hover {
+    color: $l-grey;
+    background: transparent;
+    border: 2px solid $l-grey;
+    opacity: 1;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  }
+
+  &:link, &:hover, &:visited, &:active, &:focus {
+    text-decoration: none;
+  }
+}
+
+// Square Button
+.btn-awsit-sqr {
+  color: $lavender;
+  background: transparent;
+  text-decoration: none;
+  border: 2px solid $lavender;
+  padding: 10px 15px;
+  opacity: 0.8;
+
+  &:hover {
+    color: $white;
+    background-color: $lavender;
+    border: 2px solid $lavender;
+    opacity: 1;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+  }
+
+  &:link, &:hover, &:visited, &:active, &:focus {
+    text-decoration: none;
+  }
+}
