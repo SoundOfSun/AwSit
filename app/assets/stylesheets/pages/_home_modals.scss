@@ -1,3 +1,28 @@
 .control-label {
   color: black;
 }
+
+abbr {
+  display: none;
+}
+
+.sign-up, .log-in {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px !important;
+}
+
+.modal-body {
+  color: black;
+}
+
+.modal-header {
+  text-align: center;
+  padding: 5px;
+}
+
+.close {
+  font-size: 12px;
+  margin: 5px;
+}
