@@ -4,23 +4,23 @@
       <h1>Awsit</h1>
       <p>Placeholder tagline!! </p>
       <div class="home-buttons">
-        <button data-toggle="modal" data-target="#Login_Modal">
-          <%= link_to t(".sign_in", default: "Login"), new_user_session_path%>
-        </button>
-          <p>or</p>
-        <button >
-          <%= link_to t(".sign_in", default: "Sign Up"), new_user_registration_path %>
+
+        <button>
+          <%= link_to 'Log in', '#', "data-toggle" => "modal", "data-target"=>"#modaldeviselog" %>
         </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="Login_Modal" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-             <h2>hello</h2>
-            </div>
-          </div>
+        <button>
+          <%= link_to 'Sign in', '#', "data-toggle" => "modal", "data-target"=>"#modaldevisesign" %>
+        </button>
+
+        <div id="modaldeviselog" class="modal fade">
+          <%= render 'devise/sessions/new' %>
         </div>
+
+        <div id="modaldevisesign" class="modal fade">
+          <%= render 'devise/registrations/new' %>
+        </div>
+
       </div> <!-- home buttons div-->
 
       <div class="arrow-container"> <!-- animated arrow -->
