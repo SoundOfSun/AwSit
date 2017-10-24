@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    require.params(:user).permit(:name, :address)
+    require.params(:user).permit(:name, :babysitter, :address, :profile_description)
   end
 
 end

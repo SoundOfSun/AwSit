@@ -1,0 +1,158 @@
+// GENERAL WHITE BOXES
+// 1. Phone Design
+.dashboard-layout {
+  p, h2 {
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.user, .skills, .card {
+  width: 98%;
+  height: auto;
+  // margin left/right: auto; centers the element
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid rgb(200,200,200);
+  background-color: $white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+// 2. Landscape / Desktop design
+@media only screen and (min-width: 1024px) {
+  // Defining the grid
+  .dashboard-layout {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 45% 45%;
+  }
+  // Defining each element on the grid
+  .user {
+    grid-row: 1 / span 1;
+    grid-column: 1 span 1;
+  }
+
+  .skills {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+  }
+
+  .bookings {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+  }
+  // Minor adjustments
+  .user, .skills {
+    width: 90%;
+  }
+
+  .skills, .bookings {
+    margin-bottom: 15px;
+  }
+
+  .bookings {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// 3. Tablet Portrait design
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .user {
+    width: 50%;
+  }
+
+  .skills, .card {
+    width: 90%;
+  }
+}
+
+// USER
+.user-infos {
+  display: flex;
+  justify-content: space-between;
+}
+
+.switch {
+  margin-top: 10px;
+}
+
+.user-infos-right {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.user-description {
+  margin: 10px 0;
+}
+
+// SKILLS
+.skills-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.skill {
+  flex: 0 0 45%;
+  text-align: center;
+  padding: 5px 5px;
+  border: 1px solid $l-grey;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+// MANAGE BOOKINGS
+// 1. Phone design
+.bookings h1 {
+  text-align: center;
+}
+.card {
+  margin-bottom: 10px;
+}
+.card-left, .card-right {
+  text-align: center;
+}
+.card-left, .card-middle {
+  margin-bottom: 10px;
+}
+.card-left h2 {
+  margin-top: 5px;
+}
+
+// 2. Landscape / Desktop design
+@media only screen and (min-width: 1024px) {
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-left, .card-middle {
+    margin-right: 15px;
+  }
+
+  .card-left {
+    min-width: 15%;
+  }
+
+  .card-middle {
+    padding: 10px 0;
+  }
+
+  .card-right a {
+    margin: 5px;
+  }
+}
