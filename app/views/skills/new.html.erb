@@ -1,4 +1,15 @@
-<p>This is the page to add or remove a skill</p>
+<p align="center">This is the page to add or remove a skill</p>
+
+<div class="skills">
+  <div class="skills-grid">
+    <% current_user.skills.each do |skill| %>
+      <%= render skill %>
+    <% end %>
+  </div>
+  <div align="left">
+    <a href="#" class="btn btn-awsit-sqr">Add a skill</a>
+  </div>
+</div>
 
 <div class="text-center">
   <p>Test for the buttons</p>

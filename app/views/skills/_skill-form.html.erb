@@ -1,0 +1,6 @@
+<div class="add-skill-form">
+  <%= simple_form_for @skill, remote: true do |f| %>
+    <%= f.input :content %>
+    <%= f.submit "Add a skill", class: 'btn btn-awsit-sqr' %>
+  <% end %>
+</div>
